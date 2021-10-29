@@ -1,0 +1,18 @@
+body {
+  /* display: flex; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.invalid {
+  color: red;
+  border: red solid 1px;
+}
+#form-1 {
+  width: 50%;
+  background-color: bisque;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

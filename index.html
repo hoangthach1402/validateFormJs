@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="/" method="Post" id="form-1">
+        <div class="form-group">
+            <label for="fullName">FullName</label>
+            <input type="text" name="fullname" id="fullname" class="form-control" placeholder=""
+                aria-describedby="helpId">
+            <div id="errorMessage" class="text-mute"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+            <div id="errorMessage" class="text-mute">error email</div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+
+    <script>
+        Validator({
+            form: '#form-1',
+            rules: [Validator.isRequired('#fullname'), Validator.isEmail('#email')],
+        })
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+
+</html>
